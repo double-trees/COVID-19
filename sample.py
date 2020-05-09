@@ -2,8 +2,8 @@ import csv
 import pandas
 import collections
 import numpy as np
-#import matplotlib as mpl
 import matplotlib.pyplot as plt
+import datetime
 
 def instal(str):
     with open(str) as f:
@@ -73,5 +73,6 @@ left=np.arange(0,len(pr),1)
 height = np.array(data_table[1])
 plt.bar(left,height,tick_label=label,align="center",width=0.9)
 plt.xlim(-0.5,len(pr)-.5)
-plt.savefig('data/'++'.png')
+text='data/' + str(datetime.date.today()) + '.png'
+plt.savefig(text)
 plt.show()
