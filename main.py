@@ -73,6 +73,6 @@ left=np.arange(0,len(pr),1)
 height = np.array(data_table[1])
 plt.bar(left,height,tick_label=label,align="center",width=0.9)
 plt.xlim(-0.5,len(pr)-.5)
-text='data/' + str(datetime.date.today()) + '.png'
-plt.savefig(text)
+file_name='data/' + str(datetime.date.today()) + '.png'
+plt.savefig(file_name)
 plt.show()
